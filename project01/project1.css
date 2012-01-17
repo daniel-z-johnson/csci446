@@ -22,4 +22,7 @@
 
 a:hover { color: green;}
 
-
+#copyRight{
+	text-align: center;
+	background-color: #eee;	
+}
