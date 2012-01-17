@@ -1,8 +1,18 @@
+body{
+	background-color: #aaa;
+}
+
+#outside{
+	background-color: #aaa;
+}
+
 #app{
 	letter-spacing: .01em;
 	font-family: Sans-serif;
 	border-style: solid;
 	border-width: 1px;
+	background-color: white;
+	margin: 2em;
 }
 
 #titlebar{
@@ -25,4 +35,9 @@ a:hover { color: green;}
 #copyRight{
 	text-align: center;
 	background-color: #eee;	
+}
+
+#rightSide{
+	background-color: #ddd;
+	;
 }
