@@ -37,7 +37,9 @@ a:hover { color: green;}
 	background-color: #eee;	
 }
 
+
 #rightSide{
 	background-color: #ddd;
-	;
+	float: right;
 }
+
