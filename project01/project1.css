@@ -41,5 +41,7 @@ a:hover { color: green;}
 #rightSide{
 	background-color: #ddd;
 	float: right;
+	float: top;
+	position: static;
 }
 
