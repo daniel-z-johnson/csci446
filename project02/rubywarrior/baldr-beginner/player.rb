@@ -1,7 +1,11 @@
 class Player
   def play_turn(warrior)
 		if !warrior.feel.empty?
-			warrior.attack!
+			unless warrior.feel.captive?
+				warrior.attack!
+			else
+				warrior.rescue!
+			end
 		elsif warrior.health < 20 and warrior.health >= @health
 			warrior.rest!
 		else
