@@ -1,4 +1,4 @@
-puts "Hello World!"
+#puts "Hello World!"
 if false
 	puts "Hello Again"
 	puts "I like typing this."
@@ -8,3 +8,4 @@ if false
 	puts 'I "said" do not touch this.'
 	puts "Anthor line horray"
 end
+# The pound sign(#) is how you make comments in ruby
