@@ -86,6 +86,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.atom
       format.xml { render :xml => @product }
+      format.html
     end
   end
 
