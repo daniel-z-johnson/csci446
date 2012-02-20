@@ -17,7 +17,7 @@ class ArticleTest < ActiveSupport::TestCase
 
 	test "Name cannot be Pat" do
 		ok = ["Patrick Holms", "Patty Smith", "Blue Fish Snipper", "Why the Lucky Stiff?", "Issland Hopper"]
-		bad = ["PAT", "PAt", "PaT", "Pat", "pAT", "pAt", "paT", "pat", "Pat willams", "Pat Jobs"]
+		bad = ["PAT", "PAt", "PaT", "Pat", "pAT", "pAt", "paT", "pat", "Pat willams", "Pat Jobs", "The Hidden Pat"]
 
 		ok.each do |name|
 			assert new_article_author(name).valid?, "#{name} shouldn't be invalid"
@@ -27,4 +27,6 @@ class ArticleTest < ActiveSupport::TestCase
 			assert new_article_author(name).invalid?, "#{name} shouldn't be valid"
 		end
 	end
+
+
 end

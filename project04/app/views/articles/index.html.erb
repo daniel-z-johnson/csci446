@@ -1,5 +1,12 @@
-<h1>Listing articles</h1>
+<% content_for :sub do %>
+  <h5>...with a name .com hipsters love!</h5>
+  <!-- bla hupsters -->
+<% end %>
 
+<h2>All the World's Articles</h2>
+<div class="piclink">
+  <%= link_to 'Create an Article', new_article_path %>
+</div>
 <table>
   <tr>
     <th>Title</th>
@@ -22,6 +29,10 @@
 <% end %>
 </table>
 
+<p>
+  <%= @articles.count %> articles. 
+</p>
+
 <br />
 
-<%= link_to 'New Article', new_article_path %>
+
