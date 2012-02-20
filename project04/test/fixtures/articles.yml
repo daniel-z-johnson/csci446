@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  author: MyString
-  body: MyText
-  edits: 1
+  title: "Bla"
+  author: "Dan"
+  body: "Test 123"
 
 two:
   title: MyString
   author: MyString
   body: MyText
-  edits: 1
+
+fail:
+  title: "Something not important"
+  author: "Pan somethigtn"
+  body: "Still not important"

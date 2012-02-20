@@ -3,6 +3,12 @@ require 'test_helper'
 class ArticlesControllerTest < ActionController::TestCase
   setup do
     @article = articles(:one)
+    @update = {
+      :author => "Pattrick",
+      :title => "Lorem Ipsum",
+      :body => "Estuans interius ira vehementi Estuans interius ira vehementi Sephiroth. Sors immanis Et inanis Sors immanis Et inanis.
+                Veni, venim venias, Ne me mori facias. Gloriosa"           
+    }
   end
 
   test "should get index" do

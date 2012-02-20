@@ -4,7 +4,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.text :body
-      t.integer :edits, :default => 1
+      t.integer :edits, :default => 0
 
       t.timestamps
     end

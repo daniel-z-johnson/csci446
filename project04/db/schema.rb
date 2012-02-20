@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20120219024254) do
     t.string   "title"
     t.string   "author"
     t.text     "body"
-    t.integer  "edits",      :default => 1
+    t.integer  "edits",      :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
