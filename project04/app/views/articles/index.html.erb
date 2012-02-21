@@ -12,27 +12,30 @@
 
 </div>
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Author Name</th>
-    <th>Body</th>
-    <th>Creation Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @articles.each do |article| %>
-  <tr>
-    <td><%= article.title %></td>
-    <td><%= article.author %></td>
-    <td><%= article.body %></td>
-    <td><%= article.created_at.to_s(:index) %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author Name</th>
+      <th>Body</th>
+      <th>Creation Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+<tbody>
+  <% @articles.each do |article| %>
+    <tr class="<%= cycle('odd','even') %>">
+      <td><%= article.title %></td>
+      <td><%= article.author %></td>
+      <td><%= article.body %></td>
+      <td><%= article.created_at.to_s(:index) %></td>
+      <td><%= link_to image_tag('magnifier.png'), article %></td>
+      <td><%= link_to image_tag('page_white_edit.png'), edit_article_path(article) %></td>
+      <td><%= link_to image_tag('bin_closed.png'), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</tbody>
 </table>
 <% if @articles.count == 1 %>
   <% art = "article" %>

@@ -10,7 +10,15 @@
 	text-align: center;
 	border-collapse: collapse;
 	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	border: 0px 0px 0px 0px;
 }
+
+#header p h1{
+	margin: 0px 0px 0px 0px;
+	border: 0px 0px 0px 0px;
+}
+
 #newlink{
 	float: right;
 }
@@ -21,4 +29,23 @@
 
 #sameline{
 	display: inline;
+}
+
+table{
+	border-collapse:collapse;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	text-align: center;
+}
+table, td, th{
+	border-right:1px solid black;
+	border-left:1px solid black;
+}
+
+table tbody #odd{
+	background-color: #fff;
+}
+
+table tbody #even{
+	background-color: #fff;
 }
