@@ -30,9 +30,9 @@
       <td><%= article.author %></td>
       <td><%= article.body %></td>
       <td><%= article.created_at.to_s(:index) %></td>
-      <td class="special"><%= link_to image_tag('magnifier.png'), article %></td>
-      <td class="special"><%= link_to image_tag('page_white_edit.png'), edit_article_path(article) %></td>
-      <td class="special"><%= link_to image_tag('bin_closed.png'), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td class="special"><%= link_to image_tag('magnifier.png', :title => "Article Page"), article %></td>
+      <td class="special"><%= link_to image_tag('page_white_edit.png', :title => "Edirt Article"), edit_article_path(article) %></td>
+      <td class="special"><%= link_to image_tag('bin_closed.png', :title => "Delete Article"), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </tbody>
