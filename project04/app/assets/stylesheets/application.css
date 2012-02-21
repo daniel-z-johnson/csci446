@@ -5,3 +5,20 @@
  *= require_self
  *= require_tree . 
 */
+
+#header {
+	text-align: center;
+	border-collapse: collapse;
+	font-weight: bold;
+}
+#newlink{
+	float: right;
+}
+
+#newlink a img{
+	text-decoration: none;
+}
+
+#sameline{
+	display: inline;
+}
