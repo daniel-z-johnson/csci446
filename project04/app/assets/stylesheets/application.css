@@ -31,21 +31,14 @@
 	display: inline;
 }
 
-table{
+#list_articles{
 	border-collapse:collapse;
 	border-top:1px solid black;
 	border-bottom:1px solid black;
 	text-align: center;
 }
-table, td, th{
+#list_articles, td, th{
 	border-right:1px solid black;
 	border-left:1px solid black;
 }
 
-table tbody #odd{
-	background-color: #fff;
-}
-
-table tbody #even{
-	background-color: #fff;
-}

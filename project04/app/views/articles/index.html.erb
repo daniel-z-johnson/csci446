@@ -11,7 +11,7 @@
   <h2>All the World's Articles</h2>
 
 </div>
-<table>
+<table id="list_articles">
   <thead>
     <tr>
       <th>Title</th>
@@ -30,9 +30,9 @@
       <td><%= article.author %></td>
       <td><%= article.body %></td>
       <td><%= article.created_at.to_s(:index) %></td>
-      <td><%= link_to image_tag('magnifier.png'), article %></td>
-      <td><%= link_to image_tag('page_white_edit.png'), edit_article_path(article) %></td>
-      <td><%= link_to image_tag('bin_closed.png'), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td class="special"><%= link_to image_tag('magnifier.png'), article %></td>
+      <td class="special"><%= link_to image_tag('page_white_edit.png'), edit_article_path(article) %></td>
+      <td class="special"><%= link_to image_tag('bin_closed.png'), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </tbody>

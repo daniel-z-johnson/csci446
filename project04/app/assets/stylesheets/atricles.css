@@ -1,0 +1,15 @@
+#list_articles tbody .odd{
+	background: #999;
+}
+
+#list_articles tbody .even{
+	background: #777;
+}
+
+#list_articles thead{
+	background: #666;
+}
+
+#list_articles tbody{
+
+}
