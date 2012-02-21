@@ -10,9 +10,6 @@
 	background: #666;
 }
 
-#list_articles tbody{
-
-}
 
 #title {
 	font-weight: bold;
@@ -21,6 +18,11 @@
 
 #list_articles tbody {
 	display: block;
-	height: 262px;
+	height: 230px;
 	overflow: auto;
+	width: 105%;
+}
+
+#list_articles thead{
+	display: block;
 }
