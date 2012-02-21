@@ -1,14 +1,12 @@
-
+<% content_for :sub do %>
+  <h5>...what's "Articl" in Spanish anywhy?</h5>
+  <!-- bla hupsters -->
+<% end %>
 <p id="notice"><%= notice %></p>
+<p><%= @article.title %><p>
 
 <p>
-  <b>Title:</b>
-  <%= @article.title %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @article.author %>
+  <%= "by #{@article.author}. #{@article.edits} edits since #{@article.created_at.to_s(:show)}" %>
 </p>
 
 <p>

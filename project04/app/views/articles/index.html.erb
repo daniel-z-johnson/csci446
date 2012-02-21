@@ -3,6 +3,7 @@
   <!-- bla hupsters -->
 <% end %>
 
+
 <h2>All the World's Articles</h2>
 <div class="piclink">
   <%= link_to 'Create an Article', new_article_path %>
@@ -12,6 +13,7 @@
     <th>Title</th>
     <th>Author Name</th>
     <th>Body</th>
+    <th>Creation Date</th>
     <th></th>
     <th></th>
     <th></th>
@@ -22,6 +24,7 @@
     <td><%= article.title %></td>
     <td><%= article.author %></td>
     <td><%= article.body %></td>
+    <td><%= article.created_at.to_s(:index) %></td>
     <td><%= link_to 'Show', article %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>
     <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
