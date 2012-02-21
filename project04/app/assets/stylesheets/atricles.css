@@ -18,3 +18,9 @@
 	font-weight: bold;
 	font-size: 30px;
 }
+
+#list_articles tbody {
+	display: block;
+	height: 262px;
+	overflow: auto;
+}
