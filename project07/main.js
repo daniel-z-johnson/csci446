@@ -1,5 +1,10 @@
 var guessesLeft = 10;
 var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
+var number;
+
+function generateRandomNumber(){
+	number = floor((Math.random()*100)+1);
+}
 
 $(function() {
   updateScore(guessesLeft);
