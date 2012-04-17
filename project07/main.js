@@ -15,6 +15,7 @@ function test(){
 $(function() {
   updateScore(guessesLeft);
   populateHighScores(highScores);
+  generateRandomNumber();
 });
 
 function populateHighScores(scores) {
