@@ -28,9 +28,21 @@ function updateScore(score) {
   $('h2#score span#guessesLeft').append(score);
 }
 
+function hint(hl) {
+  $('h2#score span#highLow').empty();
+  $('h2#score span#highLow').append(hl);
+}
+
 function guessNumber(){
 	theGuess = $('input#guess').val();
-	alert(theGuess);
+	if(theGuess == number){
+		alert("You Win with a score of " + guessesLeft);
+
+	}else if( theGuess > number){
+		hint("Too High");
+	}else {
+		hint("Too Low");
+	}
 	--guessesLeft;
 	updateScore(guessesLeft);
 }
