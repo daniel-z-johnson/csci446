@@ -54,6 +54,8 @@ function guessNumber(){
 	if(guessesLeft != 0 && !win){
 		if(theGuess == number){
 			hint("You Win with a score of " + guessesLeft);
+			var name = prompt("You won, now enter your name or suffer...");
+			highScores.push([guessesLeft,name]);
 			win = true;
 			++guessesLeft;
 			playAgain();
@@ -62,7 +64,7 @@ function guessNumber(){
 		}else if( theGuess > number){
 			hint("Too High");
 		}else {
-			hint("Too Low");
+			hint("Too Low" );
 		}
 		--guessesLeft;
 		if(guessesLeft == 0){
