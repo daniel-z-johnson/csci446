@@ -2,6 +2,7 @@ var guessesLeft = 10;
 var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
 var number=0;
 var theGuess;
+var win;
 
 function generateRandomNumber(){
 	number = Math.floor((Math.random()*100)+1);
@@ -14,11 +15,25 @@ function test(){
 
 $(function() {
   updateScore(guessesLeft);
+  highScores.sort(customSort);
   populateHighScores(highScores);
   generateRandomNumber();
+  win = false;
 });
 
+function reset(){	
+	guessesLeft = 10;
+	updateScore(guessesLeft);
+  	highScores.sort(customSort);
+  	populateHighScores(highScores);
+  	generateRandomNumber();
+  	$('h2#score span#reset').empty();
+  	$('h2#score span#highLow').empty();
+  	win = false;
+}
+
 function populateHighScores(scores) {
+	$('div#highScores').empty();
   for (var i = 0; i < scores.length; ++i) {
     $('div#highScores').append("<p>" + scores[i][0] + " " + scores[i][1] + "</p>");
   }
@@ -36,14 +51,42 @@ function hint(hl) {
 
 function guessNumber(){
 	theGuess = $('input#guess').val();
-	if(theGuess == number){
-		alert("You Win with a score of " + guessesLeft);
+	if(guessesLeft != 0 && !win){
+		if(theGuess == number){
+			hint("You Win with a score of " + guessesLeft);
+			win = true;
+			++guessesLeft;
+			playAgain();
 
-	}else if( theGuess > number){
-		hint("Too High");
-	}else {
-		hint("Too Low");
+
+		}else if( theGuess > number){
+			hint("Too High");
+		}else {
+			hint("Too Low");
+		}
+		--guessesLeft;
+		if(guessesLeft == 0){
+			hint("You loose, now you will die! LOLOLOLOLOLOLOL");
+			playAgain();
+		}
 	}
-	--guessesLeft;
 	updateScore(guessesLeft);
+}
+
+function playAgain(){
+	$('h2#score span#reset').empty();
+	$('h2#score span#reset').append("<input type=\"button\" value=\"Play Again?\" onclick=\"reset()\">");
+
+}
+
+function customSort(a,b){
+	if(a[0] == b[0]){
+		if(a[1]>b[1]){return 1;}
+		if(a[1]<b[1]){return -1;}
+		return 0;
+	}
+	if(a[0] < b[0]){
+		return 1;
+	}
+	return -1;
 }
