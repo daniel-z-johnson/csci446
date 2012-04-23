@@ -51,11 +51,16 @@ function hint(hl) {
 
 function guessNumber(){
 	theGuess = $('input#guess').val();
+	if(theGuess < 1 || theGuess > 100){
+		guessesLeft = 1;
+	}
 	if(guessesLeft != 0 && !win){
 		if(theGuess == number){
 			hint("You Win with a score of " + guessesLeft);
 			var name = prompt("You won, now enter your name or suffer...");
 			highScores.push([guessesLeft,name]);
+			highScores.sort(customSort);
+  			populateHighScores(highScores);
 			win = true;
 			++guessesLeft;
 			playAgain();
