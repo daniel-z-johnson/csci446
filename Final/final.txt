@@ -1,0 +1,9 @@
+﻿1. Though HTTP protocols are stateless it possible to emulated statefulness through cookies. The cookies will store session ids and from those ids the sever will be able to change the web-page to the proper state for th user. This also can be done through the url though it is more work and hassle than the cookie storing an session id.
+
+It also possible to change the state dynamically with Javascript. This is usually done with a JavaScript library such as JQuery. The Javascript usually makes a request to the server and receives information. Using this information it can post information on the page as it changes.
+
+2. A great thing about using third-party libraries for authentication is that it is often possible to have the library generate everything that is needed for authentication, and everything will work, if it is a good library. You need not worry about hashing and slating the password or making sure the input from the user is censored when it comes to password and confirm password. It is all done for you already.
+
+One disadvantage though that is sometimes a hassle to make changes to the generated authentication if you need to make changes. Also, some third-party authentication may add a lot more than you need or want. So sometimes it is very advantageous to roll your own authentication rather than relying on someone else's, though make sure to not to store the password as plain text and censored the user's input when it comes to the password.
+
+3. 
