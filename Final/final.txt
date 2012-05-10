@@ -12,4 +12,10 @@ I believe that migrations are effective tool to keep track of database schema ch
 
 One of the few disadvantages of migrations is that it is theoretical possible when multiply people are writing migrations for the same rails project to get two migrations with the same ID. If this happens rails should throw an error or something will brake in the application. Also, it is possible that when a migrations fails, for whatever reason, that the parts of the migration that succeeded will have to be rolled back my hand or the database dropped and the all the migration will have to be re applied, if there is data in the database then it will have to be restored from a back up the most recent back up if there is a back up, there should be one.
 
-4. Since I think of walking the dog and feeding the dog as functions it doesn't really fit into CRUD, because CRUD usually means a relational database and relational databases do not support storing functions. The function will have to be independent of the data can when someone walks the dog data from the database will be fed into the function and then the data will be updated appropriately.
+4. Since I think of walking the dog and feeding the dog as functions it doesn't really fit into CRUD, because CRUD usually means a relational database and relational databases do not support storing functions. The function will have to be independent of the data and when someone walks the dog data from the data from the database will have to be fed into the function and then the data will be updated appropriately. This is can be bad because everyone working on the data will have to know of walking the dog function and what it does.
+
+SOAP stand for simple object access protocol and relies on XML to pass around structured information. WSDL stands for web service description language and it is a xml language that is used for describing how web service is supposed to act. It is machine readable, it describes what services are supported how to call them and what parameters it expects.
+
+SOAP relies more on XML and RESTful relies on HTTP protocols such as get and post. SOAP seems to be better at transferring attachments.
+
+5. 
